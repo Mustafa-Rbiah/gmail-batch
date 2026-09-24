@@ -1,6 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import * as archiverModule from 'archiver';
-const archiver: any = (archiverModule as any).default || archiverModule;
+import _archiver from 'archiver';
+const archiver = (typeof _archiver === 'function' ? _archiver : (_archiver as any).default);
 import {
   createGmailClient,
   openGmailAllMail,
