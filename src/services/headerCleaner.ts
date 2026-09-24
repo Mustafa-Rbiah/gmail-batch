@@ -31,7 +31,27 @@
  *    - Body is 100% preserved byte-for-byte.
  */
 
-import { CleanHeadersConfig, DEFAULT_CLEAN_HEADERS_CONFIG } from '../types';
+import type { CleanHeadersConfig } from '../types';
+
+const DEFAULT_CLEAN_HEADERS_CONFIG: CleanHeadersConfig = {
+  enabled: true,
+  fromEnabled: true,
+  fromDomainReplacement: '[RDNS]',
+  fromTemplate: '[RDNS]',
+  toEnabled: true,
+  toTemplate: '[*to]',
+  ccEnabled: true,
+  ccTemplate: '[*to]',
+  ccAlwaysPresent: true,
+  dateEnabled: true,
+  dateTemplate: '[DATE]',
+  subjectEnabled: false,
+  subjectPrefix: 'RE: ',
+  messageIdEnabled: true,
+  messageIdTag: '[EID]',
+  trimBeforeReturnPath: true,
+  removeSpfAuthHeaders: true,
+};
 
 interface HeaderBlock {
   name: string; // lowercased header name for matching

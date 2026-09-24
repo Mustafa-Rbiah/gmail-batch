@@ -1,6 +1,5 @@
 import { ImapFlow } from 'imapflow';
-import { cleanAndFormatEmlBytes } from '../services/headerCleaner.js';
-import { CleanHeadersConfig, DateFilterConfig } from '../types.js';
+import type { DateFilterConfig } from '../types.js';
 
 export interface ImapCredentials {
   email: string;

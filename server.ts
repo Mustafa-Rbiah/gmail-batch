@@ -10,7 +10,7 @@ import {
   buildGmailQuery,
 } from './src/server/imap.js';
 import { cleanAndFormatEmlBytes } from './src/services/headerCleaner.js';
-import { CleanHeadersConfig } from './src/types.js';
+import type { CleanHeadersConfig } from './src/types.js';
 
 const app = express();
 const PORT = 3000;
